@@ -18,3 +18,4 @@
 
 * Policy Cards unlocked by researching 'The Enlightenment' Civic (Rationalism, Free Market & Liberalism) now give 5 times their respective bonus.
 * Walls and Encampments have 50% HP.
+* 300% Great Person Point Generation for all types of Great People.
