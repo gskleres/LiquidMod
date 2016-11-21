@@ -21,6 +21,7 @@
 				<File>Data/LowerMedAndLaterUnitCost.xml</File>
 				<File>Data/LowerTechCost.xml</File>
 				<File>Data/ScoutChanges.xml</File>
+				<File>Data/TripleGreatPersonPoints.xml</File>
 				<File>Data/WallChanges.xml</File>
 			</Items>
 		</UpdateDatabase>
@@ -45,6 +46,7 @@
 		<File>Data/LowerMedAndLaterUnitCost.xml</File>
 		<File>Data/LowerTechCost.xml</File>
 		<File>Data/ScoutChanges.xml</File>
+		<File>Data/TripleGreatPersonPoints.xml</File>
 		<File>Data/WallChanges.xml</File>
 		<!-- localized text -->
 		<File>Text/AntiCavalryChangesText.xml</File>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created using Sublime Text, by Steven A. Warren (ScottishRamblyMan), on 20/11/2016 -->
+
+<!--
+	The changes below modify the player's generation of all great person points by +200%, 
+	for a total of 300% GPP generation.
+
+	In order to achieve this, we have implemented a new modifier, MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS,
+	based on other in game modifiers.
+-->
+
+<GameInfo>
+	<!--
+		Here we add a new modifier to the 'Modifiers' TABLE. (the creation statement for this table can be found in 'ROOT\Base\Assets\Gameplay\Data\Schema\01_GameplaySchema.sql')
+		We give it a descriptive modifier id, use an existing modifier type and specify the requirement set to be evaluated.
+	-->
+	<Modifiers>
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS_PERCENT</ModifierType>
+			<SubjectRequirementSetId>REQUIREMENTS_TRIPLE_ALL_GREAT_PERSON_POINTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<!--
+			Define the in-game affect the modifier will have.
+			Generation of Great Person Points is increased by 200%.
+		-->
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>200</Value>
+		</Row>
+		<!--
+			Define the modifiers scope: in this case, which great people are affected.
+			All types of Great People are affected by this modifier.
+		-->
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_GENERAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_ADMIRAL</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_ENGINEER</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_MERCHANT</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_PROPHET</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_SCIENTIST</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_WRITER</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_ARTIST</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_MUSICIAN</Value>
+		</Row>
+	</ModifierArguments>
+	<!--
+		Create a 'Requirement Set': a set of requirements, against which, the game state will be evaluated to determine if the associated modifier should be applied.
+		In this case the defined type is 'REQUIREMENT_REQUIREMENTSET_IS_MET' meaning that ALL requirements in the set must be met.
+	-->
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_TRIPLE_ALL_GREAT_PERSON_POINTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENT_REQUIREMENTSET_IS_MET</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<!--
+		State the prerequisite conditions that must be met for this modifier to be applied.
+		In this case, we always want this modifer to be applied, so we set a requirement we know will always be true.
+		Since the Ancient Era is the first era in the game, the game era will always be atleast the ancient era.
+	-->
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_GAME_ERA_ATLEAST_ANCIENT</RequirementId>
+			<RequirementType>REQUIREMENT_GAME_ERA_ATLEAST</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_GAME_ERA_ATLEAST_ANCIENT</RequirementId>
+			<Name>EraType</Name>
+			<Value>ERA_ANCIENT</Value>
+		</Row>
+	</RequirementArguments>
+	<!--
+		Specify the Requirements that should be included in the Requirement Set.
+	-->
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>REQUIREMENTS_TRIPLE_ALL_GREAT_PERSON_POINTS</RequirementSetId>
+			<RequirementId>REQUIRES_GAME_ERA_ATLEAST_ANCIENT</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<!--
+		Create a new trait, TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS.
+		Since this trait is not Unique to any one Civilization, it will not be listed on the loading screen. As such, it does not require a name or a description.
+	-->
+	<Types>
+    	<Row Type="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS" Kind="KIND_TRAIT"/>
+  	</Types>
+	<Traits>
+		<Row TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS" Name="LOC_PLACEHOLDER"/>
+	</Traits>
+	<!--
+		Llink the Trait and Modifier.
+	-->
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS</TraitType>
+			<ModifierId>MODIFIER_TRIPLE_ALL_GREAT_PERSON_POINTS</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<!--
+		Apply the Trait to all Major Civilizations.
+	-->
+	<CivilizationTraits>
+		<Row CivilizationType="CIVILIZATION_AMERICA" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_ARABIA" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_AZTEC" 		TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_BRAZIL" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_CHINA" 		TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_EGYPT" 		TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_ENGLAND" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_FRANCE" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_GERMANY" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_GREECE" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_INDIA" 		TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_JAPAN" 		TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_KONGO" 		TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_NORWAY" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_ROME" 		TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_RUSSIA" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_SCYTHIA" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_SPAIN" 		TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+		<Row CivilizationType="CIVILIZATION_SUMERIA" 	TraitType="TRAIT_TRIPLE_ALL_GREAT_PERSON_POINTS"/>
+	</CivilizationTraits>
+</GameInfo>
