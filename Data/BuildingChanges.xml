@@ -67,6 +67,19 @@
 			<Where BuildingType="BUILDING_MARKET" YieldType="YIELD_GOLD" />
 		</Update>
 		
+		<!-- Shrine +10 faith -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_SHRINE" YieldType="YIELD_FAITH" />
+		</Update>
+		
+		<!-- Temple +10 faith and +10 Gold -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_TEMPLE" YieldType="YIELD_FAITH" />
+		</Update>
+		<Row BuildingType="BUILDING_TEMPLE" YieldType="YIELD_GOLD" YieldChange="10"/>
+		
 	</Building_YieldChanges>
 	<ModifierArguments>
 	
