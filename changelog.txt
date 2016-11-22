@@ -19,3 +19,22 @@
 * Policy Cards unlocked by researching 'The Enlightenment' Civic (Rationalism, Free Market & Liberalism) now give 5 times their respective bonus.
 * Walls and Encampments have 50% HP.
 * 300% Great Person Point Generation for all types of Great People.
+* Turn Timers are now 30 sec base + 1 sec per unit + 6 sec per city.
+* All Districts cost 25% less
+* Temple provides +10 gold +10 faith
+* Colosseum provides +10 Amenities to city
+* Amphitheter provides +10 Amenities to city
+* Art museum provides +10 Amenities to city
+* Stables provides +50% expereince to mounted units built in the city
+* Barracks provides +50% expereince to melee units built in the city
+* Armory provides +50% experience to all units built in the city
+* Market provides +10 gold
+* Library provides +10 beakers
+* University provides +25 beakers
+* Workshop provides +10 production
+* Shrine provides +10 faith
+* Lighthouse provides +3 gold for each ocean tile used. 
+* Gramary provides +10 housing
+* Water mill provides +5 production
+* Harbor (and English Royal Navy Dockyard as well) provides +20 gold
+* Aqueduct provides +10 housing (Roman Bath +12)
