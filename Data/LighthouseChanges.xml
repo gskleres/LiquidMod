@@ -4,14 +4,6 @@
 <!-- Lighthouse + 3 gold for each ocean tile used. -->
 <GameInfo>
 
-	<!-- CHEATS!!! -->
-	<Buildings>
-		<Update>
-			<Set PrereqTech="NULL" PrereqDistrict="DISTRICT_CITY_CENTER" Cost="1" />
-			<Where BuildingType="BUILDING_LIGHTHOUSE" />
-		</Update>
-	</Buildings>
-
 	<!-- add the modifier to the building -->
 	<BuildingModifiers>
 		<Row>
