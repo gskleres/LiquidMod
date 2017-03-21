@@ -55,6 +55,12 @@
 			<Where BuildingType="BUILDING_UNIVERSITY" YieldType="YIELD_SCIENCE" />
 		</Update>
 		
+		<!-- Madrasa + 30 beakers -->
+		<Update>
+			<Set YieldChange="30" />
+			<Where BuildingType="BUILDING_MADRASA" YieldType="YIELD_SCIENCE" />
+		</Update>
+		
 		<!-- Library + 10 beakers -->
 		<Update>
 			<Set YieldChange="10" />
@@ -79,6 +85,13 @@
 			<Where BuildingType="BUILDING_TEMPLE" YieldType="YIELD_FAITH" />
 		</Update>
 		<Row BuildingType="BUILDING_TEMPLE" YieldType="YIELD_GOLD" YieldChange="10"/>
+		
+		<!-- Temple +10 faith and +10 Gold -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_STAVE_CHURCH" YieldType="YIELD_FAITH" />
+		</Update>
+		<Row BuildingType="BUILDING_STAVE_CHURCH" YieldType="YIELD_GOLD" YieldChange="10"/>
 		
 	</Building_YieldChanges>
 	<ModifierArguments>
