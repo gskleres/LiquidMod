@@ -54,7 +54,7 @@ BALANCE CHANGELIST:
     <SupportsSinglePlayer>false</SupportsSinglePlayer>
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="Gameplay"><File>AntiCavalryChanges.xml</File><File>ArcherChanges.xml</File><File>BuildingChanges.xml</File><File>DistrictChanges.xml</File><File>EnlightenmentPolicyChanges.sql</File><File>HorsemanChanges.xml</File><File>ImprovementYieldChanges.xml</File><File>LighthouseChanges.xml</File><File>LowerCivicCost.xml</File><File>LowerDistrictCost.xml</File><File>LowerMedAndLaterUnitCost.xml</File><File>LowerTechCost.xml</File><File>ScoutChanges.xml</File><File>TripleGreatPersonPoints.xml</File><File>TurnPhasesChanges.xml</File><File>WallChanges.xml</File></UpdateDatabase><UpdateDatabase id="Map"><File>map/MapSetup.sql</File></UpdateDatabase><ImportFiles id="Map Imports"><File>map/AssignStartingPlots.lua</File><File>map/FeatureGenerator.lua</File><File>map/LiquidHexMap.lua</File><File>map/MountainsCliffs.lua</File><File>map/ResourceGenerator.lua</File><File>map/TerrainGenerator.lua</File></ImportFiles><UpdateDatabase id="Spectator"><File>spectator/Spectator_Shoutcaster_GameplayData.xml</File></UpdateDatabase></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="Gameplay"><File>AntiCavalryChanges.xml</File><File>ArcherChanges.xml</File><File>BuildingChanges.xml</File><File>DistrictChanges.xml</File><File>EnlightenmentPolicyChanges.sql</File><File>HorsemanChanges.xml</File><File>ImprovementYieldChanges.xml</File><File>LighthouseChanges.xml</File><File>LowerCivicCost.xml</File><File>LowerDistrictCost.xml</File><File>LowerMedAndLaterUnitCost.xml</File><File>LowerTechCost.xml</File><File>ScoutChanges.xml</File><File>TripleGreatPersonPoints.xml</File><File>TurnPhasesChanges.xml</File><File>WallChanges.xml</File></UpdateDatabase><UpdateDatabase id="Map"><File>map/MapSetup.sql</File></UpdateDatabase><ImportFiles id="Map Imports"><File>map/AssignStartingPlots.lua</File><File>map/FeatureGenerator.lua</File><File>map/LiquidHexMap.lua</File><File>map/MountainsCliffs.lua</File><File>map/ResourceGenerator.lua</File><File>map/TerrainGenerator.lua</File></ImportFiles><UpdateDatabase id="Spectator"><File>spectator/SpectatorReveal.lua</File></UpdateDatabase></InGameActions>]]></InGameActionData>
     <AssemblyName>LiquidMod</AssemblyName>
     <RootNamespace>LiquidMod</RootNamespace>
     <Authors>Fruitstrike, HellBlazer, Ouglaaa</Authors>
@@ -127,7 +127,7 @@ BALANCE CHANGELIST:
     <Content Include="ScoutChanges.xml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="spectator\Spectator_Shoutcaster_GameplayData.xml">
+    <Content Include="spectator\SpectatorReveal.lua">
       <SubType>Content</SubType>
     </Content>
     <Content Include="TripleGreatPersonPoints.xml">
