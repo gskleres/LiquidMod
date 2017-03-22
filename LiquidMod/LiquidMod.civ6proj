@@ -54,7 +54,7 @@ BALANCE CHANGELIST:
     <SupportsSinglePlayer>false</SupportsSinglePlayer>
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>
-    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="Gameplay"><File>AntiCavalryChanges.xml</File><File>ArcherChanges.xml</File><File>BuildingChanges.xml</File><File>DistrictChanges.xml</File><File>EnlightenmentPolicyChanges.sql</File><File>HorsemanChanges.xml</File><File>ImprovementYieldChanges.xml</File><File>LighthouseChanges.xml</File><File>LowerCivicCost.xml</File><File>LowerDistrictCost.xml</File><File>LowerMedAndLaterUnitCost.xml</File><File>LowerTechCost.xml</File><File>ScoutChanges.xml</File><File>TripleGreatPersonPoints.xml</File><File>TurnPhasesChanges.xml</File><File>WallChanges.xml</File></UpdateDatabase><UpdateDatabase id="Map"><File>map/MapSetup.sql</File></UpdateDatabase><ImportFiles id="Map Imports"><File>map/AssignStartingPlots.lua</File><File>map/FeatureGenerator.lua</File><File>map/LiquidHexMap.lua</File><File>map/MountainsCliffs.lua</File><File>map/ResourceGenerator.lua</File><File>map/TerrainGenerator.lua</File></ImportFiles><AddGameplayScripts id="Spectator"><File>spectator/SpectatorReveal.lua</File></AddGameplayScripts></InGameActions>]]></InGameActionData>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="Gameplay"><File>AntiCavalryChanges.xml</File><File>ArcherChanges.xml</File><File>BuildingChanges.xml</File><File>DistrictChanges.xml</File><File>EnlightenmentPolicyChanges.sql</File><File>HorsemanChanges.xml</File><File>ImprovementYieldChanges.xml</File><File>LighthouseChanges.xml</File><File>LowerCivicCost.xml</File><File>LowerDistrictCost.xml</File><File>LowerMedAndLaterUnitCost.xml</File><File>LowerTechCost.xml</File><File>ScoutChanges.xml</File><File>TripleGreatPersonPoints.xml</File><File>TurnPhasesChanges.xml</File><File>WallChanges.xml</File></UpdateDatabase><UpdateDatabase id="Map"><File>map/MapSetup.sql</File></UpdateDatabase><ImportFiles id="Map Imports"><File>map/AssignStartingPlots.lua</File><File>map/FeatureGenerator.lua</File><File>map/LiquidHexMap.lua</File><File>map/MountainsCliffs.lua</File><File>map/ResourceGenerator.lua</File><File>map/TerrainGenerator.lua</File></ImportFiles><AddGameplayScripts id="Spectator"><File>spectator/SpectatorReveal.lua</File></AddGameplayScripts><UpdateDatabase id="Text"><File>AntiCavalryChangesText.xml</File><File>BuildingChangesText.xml</File><File>EnlightenmentPolicyDescriptionUpdates.xml</File><File>HorsemanChangesText.xml</File><File>TileImprovementsTextChanges.xml</File></UpdateDatabase></InGameActions>]]></InGameActionData>
     <AssemblyName>LiquidMod</AssemblyName>
     <RootNamespace>LiquidMod</RootNamespace>
     <Authors>Fruitstrike, HellBlazer, Ouglaaa</Authors>
@@ -67,10 +67,16 @@ BALANCE CHANGELIST:
     <Content Include="AntiCavalryChanges.xml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="AntiCavalryChangesText.xml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ArcherChanges.xml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="BuildingChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BuildingChangesText.xml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="DistrictChanges.xml">
@@ -79,7 +85,13 @@ BALANCE CHANGELIST:
     <Content Include="EnlightenmentPolicyChanges.sql">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="EnlightenmentPolicyDescriptionUpdates.xml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="HorsemanChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="HorsemanChangesText.xml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ImprovementYieldChanges.xml">
@@ -128,6 +140,9 @@ BALANCE CHANGELIST:
       <SubType>Content</SubType>
     </Content>
     <Content Include="spectator\SpectatorReveal.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TileImprovementsTextChanges.xml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="TripleGreatPersonPoints.xml">
