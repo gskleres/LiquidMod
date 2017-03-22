@@ -9,5 +9,6 @@ function Initialize()
         pVis:ChangeVisibilityCount(iPlotIndex, 1); 
       end
     end
+  end
 end
 Initialize();
