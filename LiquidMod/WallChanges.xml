@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created by Fruitstrike on 2016-11-19 -->
+
+<GameInfo>
+
+	<!-- Walls have half hit points (25 instead of 50) -->
+	<Buildings>
+		<Update>
+			<Set OuterDefenseHitPoints="25" /> <!-- OuterDefenseStrength="1" -->
+			<Where BuildingType="BUILDING_WALLS" />
+		</Update>
+	</Buildings>
+
+	<!-- Encampments have half hit points (50 instead of 100) -->
+	<Districts>
+		<Update>
+			<Set HitPoints="50" /> <!-- OuterDefenseStrength="1" -->
+			<Where DistrictType="DISTRICT_ENCAMPMENT" />
+		</Update>
+	</Districts>
+	
+</GameInfo>

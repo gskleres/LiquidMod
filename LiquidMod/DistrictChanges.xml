@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created by Fruitstrike on 2016-11-20 -->
+
+<GameInfo>
+
+	<Districts>
+	
+		<!-- Aqueduct (and the Bath that replaces it) gives additional +10 base Housing -->
+		<Update>
+			<Set Housing="10" />
+			<Where DistrictType="DISTRICT_AQUEDUCT" />
+		</Update>
+		<Update>
+			<Set Housing="12" />
+			<Where DistrictType="DISTRICT_BATH" />
+		</Update>
+		
+	</Districts>
+	
+	<District_CitizenYieldChanges>
+	
+		<!-- Harbor (and Royal Navy Dockyard replacement) gives +20 Gold to working citizen now -->
+		<Update>
+			<Set YieldChange="20" />
+			<Where DistrictType="DISTRICT_HARBOR" YieldType="YIELD_GOLD" />
+		</Update>
+		<Update>
+			<Set YieldChange="20" />
+			<Where DistrictType="DISTRICT_ROYAL_NAVY_DOCKYARD" YieldType="YIELD_GOLD" />
+		</Update>
+		
+	</District_CitizenYieldChanges>
+	
+</GameInfo>

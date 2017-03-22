@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Created by ouglaaa on 2016-11-11 -->
+<GameInfo>
+  <!-- 
+		Lower tech cost by 25%
+	-->
+  <Technologies>
+    <Update>
+      <Set Cost="18" />
+      <Where TechnologyType="TECH_POTTERY" />
+    </Update>
+    <Update>
+      <Set Cost="18" />
+      <Where TechnologyType="TECH_ANIMAL_HUSBANDRY" />
+    </Update>
+    <Update>
+      <Set Cost="18" />
+      <Where TechnologyType="TECH_MINING" />
+    </Update>
+    <Update>
+      <Set Cost="37" />
+      <Where TechnologyType="TECH_SAILING" />
+    </Update>
+    <Update>
+      <Set Cost="37" />
+      <Where TechnologyType="TECH_ASTROLOGY" />
+    </Update>
+    <Update>
+      <Set Cost="37" />
+      <Where TechnologyType="TECH_IRRIGATION" />
+    </Update>
+    <Update>
+      <Set Cost="37" />
+      <Where TechnologyType="TECH_ARCHERY" />
+    </Update>
+    <Update>
+      <Set Cost="37" />
+      <Where TechnologyType="TECH_WRITING" />
+    </Update>
+    <Update>
+      <Set Cost="60" />
+      <Where TechnologyType="TECH_MASONRY" />
+    </Update>
+    <Update>
+      <Set Cost="60" />
+      <Where TechnologyType="TECH_BRONZE_WORKING" />
+    </Update>
+    <Update>
+      <Set Cost="60" />
+      <Where TechnologyType="TECH_THE_WHEEL" />
+    </Update>
+    <Update>
+      <Set Cost="90" />
+      <Where TechnologyType="TECH_CELESTIAL_NAVIGATION" />
+    </Update>
+    <Update>
+      <Set Cost="90" />
+      <Where TechnologyType="TECH_CURRENCY" />
+    </Update>
+    <Update>
+      <Set Cost="90" />
+      <Where TechnologyType="TECH_HORSEBACK_RIDING" />
+    </Update>
+    <Update>
+      <Set Cost="90" />
+      <Where TechnologyType="TECH_IRON_WORKING" />
+    </Update>
+    <Update>
+      <Set Cost="150" />
+      <Where TechnologyType="TECH_SHIPBUILDING" />
+    </Update>
+    <Update>
+      <Set Cost="150" />
+      <Where TechnologyType="TECH_MATHEMATICS" />
+    </Update>
+    <Update>
+      <Set Cost="150" />
+      <Where TechnologyType="TECH_CONSTRUCTION" />
+    </Update>
+    <Update>
+      <Set Cost="150" />
+      <Where TechnologyType="TECH_ENGINEERING" />
+    </Update>
+    <Update>
+      <Set Cost="225" />
+      <Where TechnologyType="TECH_MILITARY_TACTICS" />
+    </Update>
+    <Update>
+      <Set Cost="225" />
+      <Where TechnologyType="TECH_APPRENTICESHIP" />
+    </Update>
+    <Update>
+      <Set Cost="225" />
+      <Where TechnologyType="TECH_STIRRUPS" />
+    </Update>
+    <Update>
+      <Set Cost="225" />
+      <Where TechnologyType="TECH_MACHINERY" />
+    </Update>
+    <Update>
+      <Set Cost="292" />
+      <Where TechnologyType="TECH_EDUCATION" />
+    </Update>
+    <Update>
+      <Set Cost="292" />
+      <Where TechnologyType="TECH_MILITARY_ENGINEERING" />
+    </Update>
+    <Update>
+      <Set Cost="292" />
+      <Where TechnologyType="TECH_CASTLES" />
+    </Update>
+    <Update>
+      <Set Cost="405" />
+      <Where TechnologyType="TECH_CARTOGRAPHY" />
+    </Update>
+    <Update>
+      <Set Cost="405" />
+      <Where TechnologyType="TECH_MASS_PRODUCTION" />
+    </Update>
+    <Update>
+      <Set Cost="405" />
+      <Where TechnologyType="TECH_BANKING" />
+    </Update>
+    <Update>
+      <Set Cost="405" />
+      <Where TechnologyType="TECH_GUNPOWDER" />
+    </Update>
+    <Update>
+      <Set Cost="405" />
+      <Where TechnologyType="TECH_PRINTING" />
+    </Update>
+    <Update>
+      <Set Cost="495" />
+      <Where TechnologyType="TECH_SQUARE_RIGGING" />
+    </Update>
+    <Update>
+      <Set Cost="495" />
+      <Where TechnologyType="TECH_ASTRONOMY" />
+    </Update>
+    <Update>
+      <Set Cost="495" />
+      <Where TechnologyType="TECH_METAL_CASTING" />
+    </Update>
+    <Update>
+      <Set Cost="495" />
+      <Where TechnologyType="TECH_SIEGE_TACTICS" />
+    </Update>
+    <Update>
+      <Set Cost="603" />
+      <Where TechnologyType="TECH_INDUSTRIALIZATION" />
+    </Update>
+    <Update>
+      <Set Cost="603" />
+      <Where TechnologyType="TECH_SCIENTIFIC_THEORY" />
+    </Update>
+    <Update>
+      <Set Cost="603" />
+      <Where TechnologyType="TECH_BALLISTICS" />
+    </Update>
+    <Update>
+      <Set Cost="603" />
+      <Where TechnologyType="TECH_MILITARY_SCIENCE" />
+    </Update>
+    <Update>
+      <Set Cost="693" />
+      <Where TechnologyType="TECH_STEAM_POWER" />
+    </Update>
+    <Update>
+      <Set Cost="693" />
+      <Where TechnologyType="TECH_SANITATION" />
+    </Update>
+    <Update>
+      <Set Cost="693" />
+      <Where TechnologyType="TECH_ECONOMICS" />
+    </Update>
+    <Update>
+      <Set Cost="693" />
+      <Where TechnologyType="TECH_RIFLING" />
+    </Update>
+    <Update>
+      <Set Cost="776" />
+      <Where TechnologyType="TECH_FLIGHT" />
+    </Update>
+    <Update>
+      <Set Cost="776" />
+      <Where TechnologyType="TECH_REPLACEABLE_PARTS" />
+    </Update>
+    <Update>
+      <Set Cost="776" />
+      <Where TechnologyType="TECH_STEEL" />
+    </Update>
+    <Update>
+      <Set Cost="851" />
+      <Where TechnologyType="TECH_ELECTRICITY" />
+    </Update>
+    <Update>
+      <Set Cost="851" />
+      <Where TechnologyType="TECH_RADIO" />
+    </Update>
+    <Update>
+      <Set Cost="851" />
+      <Where TechnologyType="TECH_CHEMISTRY" />
+    </Update>
+    <Update>
+      <Set Cost="851" />
+      <Where TechnologyType="TECH_COMBUSTION" />
+    </Update>
+    <Update>
+      <Set Cost="918" />
+      <Where TechnologyType="TECH_ADVANCED_FLIGHT" />
+    </Update>
+    <Update>
+      <Set Cost="918" />
+      <Where TechnologyType="TECH_ROCKETRY" />
+    </Update>
+    <Update>
+      <Set Cost="918" />
+      <Where TechnologyType="TECH_ADVANCED_BALLISTICS" />
+    </Update>
+    <Update>
+      <Set Cost="918" />
+      <Where TechnologyType="TECH_COMBINED_ARMS" />
+    </Update>
+    <Update>
+      <Set Cost="918" />
+      <Where TechnologyType="TECH_PLASTICS" />
+    </Update>
+    <Update>
+      <Set Cost="1031" />
+      <Where TechnologyType="TECH_COMPUTERS" />
+    </Update>
+    <Update>
+      <Set Cost="1031" />
+      <Where TechnologyType="TECH_NUCLEAR_FISSION" />
+    </Update>
+    <Update>
+      <Set Cost="1031" />
+      <Where TechnologyType="TECH_SYNTHETIC_MATERIALS" />
+    </Update>
+    <Update>
+      <Set Cost="1155" />
+      <Where TechnologyType="TECH_TELECOMMUNICATIONS" />
+    </Update>
+    <Update>
+      <Set Cost="1155" />
+      <Where TechnologyType="TECH_SATELLITES" />
+    </Update>
+    <Update>
+      <Set Cost="1155" />
+      <Where TechnologyType="TECH_GUIDANCE_SYSTEMS" />
+    </Update>
+    <Update>
+      <Set Cost="1155" />
+      <Where TechnologyType="TECH_LASERS" />
+    </Update>
+    <Update>
+      <Set Cost="1155" />
+      <Where TechnologyType="TECH_COMPOSITES" />
+    </Update>
+    <Update>
+      <Set Cost="1155" />
+      <Where TechnologyType="TECH_STEALTH_TECHNOLOGY" />
+    </Update>
+    <Update>
+      <Set Cost="1346" />
+      <Where TechnologyType="TECH_ROBOTICS" />
+    </Update>
+    <Update>
+      <Set Cost="1346" />
+      <Where TechnologyType="TECH_NANOTECHNOLOGY" />
+    </Update>
+    <Update>
+      <Set Cost="1346" />
+      <Where TechnologyType="TECH_NUCLEAR_FUSION" />
+    </Update>
+    <Update>
+      <Set Cost="1537" />
+      <Where TechnologyType="TECH_FUTURE_TECH" />
+    </Update>
+  </Technologies>
+</GameInfo>

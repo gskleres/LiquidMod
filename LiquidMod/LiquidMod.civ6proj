@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Liquid Mod</Name>
+    <Guid>f10b076a-bd1d-4729-9925-d7ed14371458</Guid>
+    <ProjectGuid>86bf8071-306d-4880-80e2-69342e1a0546</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>LiquidMod - Official 3v3 MP Team Balance Mod from Team Liquid</Teaser>
+    <Description>LIQUIDMAP:
+
+• Start positions are fixed: Team 1 on left (P1 upper / P2 middle / P3 lower) and Team 2 on right (P4 upper / P5 middle / P6 lower)
+• Mirrored terrain in hexagon shape with ocean on outside, wraps horizontally
+
+BALANCE CHANGELIST: 
+
+• Anti-Cavalry units (Spearmen, Pikemen) now have +20 vs cavalry (up from +10)
+• Archers now have 10 melee strength (down from 15)
+• [Bug Fix] Player-based Global Production Modifiers (like God of the Forge) now only affect YOU globally instead of all players.
+• Horsemen now have -12 Combat Strength when fighting cities and districts
+• Farms provide +3 Food
+• Mines provide +3 Production
+• Pastures provide +1 Production and +2 Food
+• Irrigation improvements provide +1 Food and +3 Gold
+• All Civics cost 25% less Culture to research
+• All Units available from the Medieval Era and on cost 50% less Production
+• All Technologies cost 25% less Science to research
+• Scouts have 15 combat strength (up from 10)
+• Policy Cards unlocked by researching 'The Enlightenment' Civic (Rationalism, Free Market &amp; Liberalism) now give 5 times their respective bonus.
+• Walls and Encampments have 50% HP.
+• 300% Great Person Point Generation for all types of Great People.
+• Turn Timers are now 30 sec base + 1 sec per unit + 6 sec per city.
+• All Districts cost 25% less
+• Temple (and Norwegian Stave Church) provides +10 gold +10 faith
+• Colosseum provides +10 Amenities to city
+• Amphitheater provides +10 Amenities to city
+• Art museum provides +10 Amenities to city
+• Stables provides +50% expereince to mounted units built in the city
+• Barracks provides +50% expereince to melee units built in the city
+• Armory provides +50% experience to all units built in the city
+• Market (and Polish Sukiennice) provides +10 gold
+• Bank provides +25 gold
+• Library provides +10 science
+• University provides +25 science
+• Arabian Madrasa +30 science
+• Workshop provides +10 production
+• Shrine provides +10 faith
+• Lighthouse provides +3 gold for each ocean tile used.
+• Granary provides +10 housing
+• Water mill provides +5 production
+• Harbor (and English Royal Navy Dockyard) provides +20 gold
+• Aqueduct provides +10 housing (Roman Bath +12)</Description>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>false</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="Gameplay"><File>AntiCavalryChanges.xml</File><File>ArcherChanges.xml</File><File>BuildingChanges.xml</File><File>DistrictChanges.xml</File><File>EnlightenmentPolicyChanges.sql</File><File>HorsemanChanges.xml</File><File>ImprovementYieldChanges.xml</File><File>LighthouseChanges.xml</File><File>LowerCivicCost.xml</File><File>LowerDistrictCost.xml</File><File>LowerMedAndLaterUnitCost.xml</File><File>LowerTechCost.xml</File><File>ScoutChanges.xml</File><File>TripleGreatPersonPoints.xml</File><File>TurnPhasesChanges.xml</File><File>WallChanges.xml</File></UpdateDatabase><UpdateDatabase id="Map"><File>map/MapSetup.sql</File></UpdateDatabase><ImportFiles id="Map Imports"><File>map/AssignStartingPlots.lua</File><File>map/FeatureGenerator.lua</File><File>map/LiquidHexMap.lua</File><File>map/MountainsCliffs.lua</File><File>map/ResourceGenerator.lua</File><File>map/TerrainGenerator.lua</File></ImportFiles><UpdateDatabase id="Spectator"><File>spectator/Spectator_Shoutcaster_GameplayData.xml</File></UpdateDatabase></InGameActions>]]></InGameActionData>
+    <AssemblyName>LiquidMod</AssemblyName>
+    <RootNamespace>LiquidMod</RootNamespace>
+    <Authors>Fruitstrike, HellBlazer, Ouglaaa</Authors>
+    <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="Map"><File>map/MapConfig.sql</File></UpdateDatabase></FrontEndActions>]]></FrontEndActionData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AntiCavalryChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ArcherChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BuildingChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DistrictChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="EnlightenmentPolicyChanges.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="HorsemanChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ImprovementYieldChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LighthouseChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LowerCivicCost.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LowerDistrictCost.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LowerMedAndLaterUnitCost.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LowerTechCost.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="map\AssignStartingPlots.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="map\FeatureGenerator.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="map\LiquidHexMap.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="map\MapConfig.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="map\MapSetup.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="map\MountainsCliffs.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="map\ResourceGenerator.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="map\TerrainGenerator.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ScoutChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="spectator\Spectator_Shoutcaster_GameplayData.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TripleGreatPersonPoints.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TurnPhasesChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="WallChanges.xml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="map" />
+    <Folder Include="spectator" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created by Fruitstrike on 2016-11-11 -->
+
+<GameInfo>
+
+	<!-- Archers have 10 melee combat strength (down from 15) -->
+	<Units>
+		<Update>
+			<Set Combat="10" />
+			<Where UnitType="UNIT_ARCHER" />
+		</Update>
+	</Units>
+	
+</GameInfo>

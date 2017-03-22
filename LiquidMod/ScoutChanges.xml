@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created by Fruitstrike on 2016-11-11 -->
+
+<GameInfo>
+
+	<!-- Scouts have 15 melee combat strength (up from 10) -->
+	<Units>
+		<Update>
+			<Set Combat="15" />
+			<Where UnitType="UNIT_SCOUT" />
+		</Update>
+	</Units>
+	
+</GameInfo>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created by Fruitstrike on 2016-11-20 -->
+
+<GameInfo>
+
+	<!-- 
+			Temple - Units built in a city with a temple attack at 100% efficiency when injured
+			Shrine + 10 faith and units built in this city heal twice as fast
+	-->
+	
+	<Buildings>
+		
+		<!-- Gramary +10 housing -->
+		<Update>
+			<Set Housing="10" />
+			<Where BuildingType="BUILDING_GRANARY" />
+		</Update>
+		
+		<!-- Arena - + 10 Amenities to city -->
+		<Update>
+			<Set Entertainment="10" />
+			<Where BuildingType="BUILDING_ARENA" />
+		</Update>
+		
+		<!-- Amphitheater - + 10 Amenities to city -->
+		<Update>
+			<Set Entertainment="10" />
+			<Where BuildingType="BUILDING_AMPHITHEATER" />
+		</Update>
+		
+		<!-- Art museum - + 10 Amenities to city -->
+		<Update>
+			<Set Entertainment="10" />
+			<Where BuildingType="BUILDING_MUSEUM_ART" />
+		</Update>
+		
+	</Buildings>
+	<Building_YieldChanges>
+	
+		<!-- Water mill + Increase hammers to +5 a turn -->
+		<Update>
+			<Set YieldChange="5" />
+			<Where BuildingType="BUILDING_WATER_MILL" YieldType="YIELD_PRODUCTION" />
+		</Update>
+		
+		<!-- Workshop + 10 hammers -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_WORKSHOP" YieldType="YIELD_PRODUCTION" />
+		</Update>
+		
+		<!-- University + 25 beakers -->
+		<Update>
+			<Set YieldChange="25" />
+			<Where BuildingType="BUILDING_UNIVERSITY" YieldType="YIELD_SCIENCE" />
+		</Update>
+		
+		<!-- Madrasa + 30 beakers -->
+		<Update>
+			<Set YieldChange="30" />
+			<Where BuildingType="BUILDING_MADRASA" YieldType="YIELD_SCIENCE" />
+		</Update>
+		
+		<!-- Library + 10 beakers -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_LIBRARY" YieldType="YIELD_SCIENCE" />
+		</Update>
+		
+		<!-- Market + 10 gold -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_MARKET" YieldType="YIELD_GOLD" />
+		</Update>
+		
+		<!-- Sukiennice + 10 gold -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_SUKIENNICE" YieldType="YIELD_GOLD" />
+		</Update>
+
+		<!-- Bank + 25 gold -->
+		<Update>
+			<Set YieldChange="25" />
+			<Where BuildingType="BUILDING_BANK" YieldType="YIELD_GOLD" />
+		</Update>
+
+		<!-- Shrine +10 faith -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_SHRINE" YieldType="YIELD_FAITH" />
+		</Update>
+		
+		<!-- Temple +10 faith and +10 Gold -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_TEMPLE" YieldType="YIELD_FAITH" />
+		</Update>
+		<Row BuildingType="BUILDING_TEMPLE" YieldType="YIELD_GOLD" YieldChange="10"/>
+		
+		<!-- Temple +10 faith and +10 Gold -->
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_STAVE_CHURCH" YieldType="YIELD_FAITH" />
+		</Update>
+		<Row BuildingType="BUILDING_STAVE_CHURCH" YieldType="YIELD_GOLD" YieldChange="10"/>
+		
+	</Building_YieldChanges>
+	<ModifierArguments>
+	
+		<!-- Stables + 50% expereince to mounted units built in the city -->
+		<Update>
+			<Set Value="50" />
+			<Where ModifierId="STABLE_TRAINED_UNIT_XP_MODIFIER" Name="Amount" />
+		</Update>
+		
+		<!-- Barracks + 50% expereince to melee units built in the city -->
+		<Update>
+			<Set Value="50" />
+			<Where ModifierId="BARRACKS_TRAINED_UNIT_XP_MODIFIER" Name="Amount" />
+		</Update>
+		
+		<!-- Armory + 50% experience to all units built in the city -->
+		<Update>
+			<Set Value="50" />
+			<Where ModifierId="ARMORY_TRAINED_UNIT_XP_MODIFIER" Name="Amount" />
+		</Update>
+	
+	</ModifierArguments>
+	
+</GameInfo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created by Fruitstrike on 2016-11-11 -->
+
+<GameInfo>
+
+	<!-- Spearmen are +20 strength vs light/heavy cav (up from +10) -->
+	<ModifierArguments>
+		<Update>
+			<Set Value="20" />
+			<Where ModifierId="ANTI_CAVALRY_COMBAT_BONUS" Name="Amount" />
+		</Update>
+	</ModifierArguments>
+	
+</GameInfo>

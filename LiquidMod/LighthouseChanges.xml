@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Created by Fruitstrike on 2016-11-20 -->
+
+<!-- Lighthouse + 3 gold for each ocean tile used. -->
+<GameInfo>
+
+	<!-- add the modifier to the building -->
+	<BuildingModifiers>
+		<Row>
+			<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
+			<ModifierId>LIGHTHOUSE_OCEAN_GOLD</ModifierId>
+		</Row>
+	</BuildingModifiers>
+	
+	<!-- create the modifier that checks for the building and the modifier that checks each plot -->
+	<Modifiers>
+		<Row>
+			<ModifierId>LIGHTHOUSE_OCEAN_GOLD</ModifierId>
+			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_LIGHTHOUSE_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>LIGHTHOUSE_OCEAN_GOLD_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>GOLD_PLOT_HAS_OCEAN_OR_COAST_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	
+	<ModifierArguments>
+		<!-- attach the modifier checking for building with modifier checking each plot -->
+		<Row>
+			<ModifierId>LIGHTHOUSE_OCEAN_GOLD</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>LIGHTHOUSE_OCEAN_GOLD_MODIFIER</Value>
+		</Row>
+		<!-- define the modifier for plots to give 3 extra gold -->
+		<Row>
+			<ModifierId>LIGHTHOUSE_OCEAN_GOLD_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>LIGHTHOUSE_OCEAN_GOLD_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+	</ModifierArguments>
+	
+	<RequirementSets>
+		<!-- city requires lighthouse -->
+		<Row>
+			<RequirementSetId>CITY_HAS_LIGHTHOUSE_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+		<!-- plot requires coast or ocean -->
+		<Row>
+			<RequirementSetId>GOLD_PLOT_HAS_OCEAN_OR_COAST_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	
+	<RequirementSetRequirements>
+		<!-- city requires lighthouse -->
+		<Row>
+			<RequirementSetId>CITY_HAS_LIGHTHOUSE_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_CITY_HAS_LIGHTHOUSE</RequirementId>
+		</Row>
+		<!-- plot can be ocean -->
+		<Row>
+			<RequirementSetId>GOLD_PLOT_HAS_OCEAN_OR_COAST_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_OCEAN</RequirementId>
+		</Row>
+		<!-- plot can be coast -->
+		<Row>
+			<RequirementSetId>GOLD_PLOT_HAS_OCEAN_OR_COAST_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLOT_HAS_COAST</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+
+	<Requirements>
+		<!-- city requires lighthouse -->
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_LIGHTHOUSE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+		</Row>
+		<!-- plot can be ocean -->
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_OCEAN</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
+		</Row>
+		<!-- plot can be coast -->
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_COAST</RequirementId>
+			<RequirementType>REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES</RequirementType>
+		</Row>
+	</Requirements>
+	
+	<RequirementArguments>
+		<!-- city requires lighthouse -->
+		<Row>
+			<RequirementId>REQUIRES_CITY_HAS_LIGHTHOUSE</RequirementId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_LIGHTHOUSE</Value>
+		</Row>
+		<!-- plot can be ocean -->
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_OCEAN</RequirementId>
+			<Name>TerrainType</Name>
+			<Value>TERRAIN_OCEAN</Value>
+		</Row>
+		<!-- plot can be coast -->
+		<Row>
+			<RequirementId>REQUIRES_PLOT_HAS_COAST</RequirementId>
+			<Name>TerrainType</Name>
+			<Value>TERRAIN_COAST</Value>
+		</Row>
+	</RequirementArguments>
+	
+</GameInfo>
