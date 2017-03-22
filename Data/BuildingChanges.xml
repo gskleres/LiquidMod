@@ -73,6 +73,11 @@
 			<Where BuildingType="BUILDING_MARKET" YieldType="YIELD_GOLD" />
 		</Update>
 		
+		<Update>
+			<Set YieldChange="10" />
+			<Where BuildingType="BUILDING_SUKIENNICE" YieldType="YIELD_GOLD" />
+		</Update>
+		
 		<!-- Shrine +10 faith -->
 		<Update>
 			<Set YieldChange="10" />
