@@ -10,5 +10,19 @@ function Initialize()
       end
     end
   end
+
+  print("-- Observer Remove Warrior!");
+  --remove the warrior
+  local pPlayer:table = Players[6];
+
+  if (pPlayer) then
+    local pPlayerUnits:table = pPlayer:GetUnits();
+
+    if (pPlayerUnits) then
+      for i, pUnit in pPlayerUnits:Members() do
+          pPlayer:GetUnits():Destroy(pUnit)
+      end
+    end
+  end
 end
 Initialize();
