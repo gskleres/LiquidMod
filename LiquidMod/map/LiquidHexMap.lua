@@ -227,6 +227,9 @@ function GenerateMap()
 		TerrainBuilder.SetFeatureType(plotc, g_FEATURE_NONE);
 		ResourceBuilder.SetResourceType(plotc, -1, 1);
 	end
+
+	
+
 	print("---------------------------------------------------------------------------------")
 
 	local plotZ = Map.GetPlotByIndex(0);
@@ -269,6 +272,23 @@ function GenerateMap()
 		Players[i]:GetUnits():Create(iUnitTypeWarrior, pPlot:GetX(), pPlot:GetY());
 		Players[i]:GetUnits():Create(iUnitTypeSettler, pPlot:GetX(), pPlot:GetY());
 	end
+
+	--check number of alive players
+	numPlayers = PlayerManager.GetAliveMajorsCount();
+	
+	print("Placing Units Alive Players: " .. tostring(numPlayers));
+
+	if numPlayers == 7 then
+		-- observer in the game
+		local centerX = math.floor(g_iW/2);
+		local centerY = math.floor(g_iH/2);
+
+		local i = centerY * g_iW + centerX;
+		local pPlot = Map.GetPlotByIndex(i);
+		Players[6]:GetUnits():Create(iUnitTypeWarrior, pPlot:GetX(), pPlot:GetY());
+		--Players[6]:GetUnits():Create(iUnitTypeSettler, pPlot:GetX(), pPlot:GetY());
+	end
+
 end
 
 -------------------------------------------------------------------------------

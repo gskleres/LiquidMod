@@ -230,6 +230,10 @@ function AssignStartingPlots:__InitStartingData()
 	-- set pre determined start locations
 	self.playerStarts = {};
 	
+	local numPlayers = self.iNumMajorCivs
+	
+	print("Total Players In Game: " .. tostring(numPlayers));
+
 	--team 1 (west)
 	self.playerStarts[0] = {X = 20, Y = 29};
 	self.playerStarts[1] = {X = 18, Y = 22};
@@ -240,6 +244,13 @@ function AssignStartingPlots:__InitStartingData()
 	self.playerStarts[4] = {X = 31, Y = 22};
 	self.playerStarts[5] = {X = 28, Y = 15};
 
+	--check if observer mode is active
+	if (numPlayers == 7) then
+		--observer mode on
+		--make player 7 the observer
+		self.playerStarts[6] = {X = 25, Y = 22};
+	end
+	
 	for i = 0, self.iNumMajorCivs - 1 do
 		local player = Players[i];
 		local position = self.playerStarts[i];
